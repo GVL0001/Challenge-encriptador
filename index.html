@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encriptador Alura</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="encryptor.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alura</title>
+    <script src="encryptor.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
 </head>
+
 <body>
 
     <header>
@@ -15,15 +20,15 @@
 
     <main>
         <div>
-            <textarea id="textoOriginal" placeholder="Ingrese tu texto aquí"></textarea>
+            <textarea id="textoOriginal" placeholder="Ingrese el texto aquí"></textarea>
           </div>
         
           <div>
             <textarea id="textoResultado" readonly placeholder="Ningún mensaje fue encontrado"></textarea>
           </div>
         
-          <button onclick="encriptarTexto()">Encriptar</button>
-          <button onclick="desencriptarTexto()">Desencriptar</button>
+          <div><button onclick="encriptarTexto()">Encriptar</button></div>
+          <div><button onclick="desencriptarTexto()">Desencriptar</button></div>
         
           <script>
             function encriptarTexto() {
