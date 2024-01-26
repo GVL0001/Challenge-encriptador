@@ -21,28 +21,28 @@
     <main>
         <div>
             <textarea id="textoOriginal" placeholder="Ingrese el texto aquí"></textarea>
-          </div>
-        
-          <div>
-            <textarea id="textoResultado" readonly placeholder="Ningún mensaje fue encontrado"></textarea>
-          </div>
-        
-          <div><button onclick="encriptarTexto()">Encriptar</button></div>
-          <div><button onclick="desencriptarTexto()">Desencriptar</button></div>
-        
-          <script>
-            function encriptarTexto() {
-              const textoOriginal = document.getElementById("textoOriginal").value;
-              const textoEncriptado = encriptar(textoOriginal);
-              document.getElementById("textoResultado").value = textoEncriptado;
-            }
-        
-            function desencriptarTexto() {
-              const textoEncriptado = document.getElementById("textoOriginal").value;
-              const textoOriginal = desencriptar(textoEncriptado);
-              document.getElementById("textoResultado").value = textoOriginal;
-            }
-          </script>
+        </div>
+      
+        <div class="container-text-encrypt">
+          <textarea class="text-result-class" id="textoResultado" readonly placeholder="Ningún mensaje fue encontrado"></textarea>
+        </div>
+      
+        <div><button onclick="encriptarTexto()">Encriptar</button></div>
+        <div><button onclick="desencriptarTexto()">Desencriptar</button></div>
+      
+        <script>
+          function encriptarTexto() {
+            const textoOriginal = document.getElementById("textoOriginal").value;
+            const textoEncriptado = encriptar(textoOriginal);
+            document.getElementById("textoResultado").value = textoEncriptado;
+          }
+      
+          function desencriptarTexto() {
+            const textoEncriptado = document.getElementById("textoOriginal").value;
+            const textoOriginal = desencriptar(textoEncriptado);
+            document.getElementById("textoResultado").value = textoOriginal;
+          }
+        </script>
     </main>
     
 </body>
