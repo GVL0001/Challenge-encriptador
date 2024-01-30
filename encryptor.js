@@ -1,30 +1,67 @@
 //Función de encriptador y desencriptador
-function encriptarTexto() {
-    const textoOriginal = document.getElementById("textoOriginal").value;
-    const textoEncriptado = encriptar(textoOriginal);
-    document.getElementById("textoResultado").value = textoEncriptado;
-  }
+function encryptText() {
+  let textInput = document.getElementById("text-input").value;
+  let standbyTitle = document.getElementById("standby-tittle");
+  let standbyParagrahp = document.getElementById("standby-paragraph");
+  let standbyImage = document.getElementById("standby-image");
 
-  function desencriptarTexto() {
-    const textoEncriptado = document.getElementById("textoOriginal").value;
-    const textoOriginal = desencriptar(textoEncriptado);
-    document.getElementById("textoResultado").value = textoOriginal;
-  }
+  let encryptedText = textInput
+    .replace(/e/gi, "enter")
+    .replace(/i/gi, "imes")
+    .replace(/a/gi, "ai")
+    .replace(/o/gi, "ober")
+    .replace(/u/gi, "ufat");
 
-  function encriptar(texto) {
-    let textoEncriptado = texto.replace(/e/g, "enter")
-                              .replace(/i/g, "imes")
-                              .replace(/a/g, "ai")
-                              .replace(/o/g, "ober")
-                              .replace(/u/g, "ufat");
-    return textoEncriptado;
+  if (textInput.length != 0) {
+    document.getElementById("standby-paragraph").value = encryptedText;
+    standbyTitle.textContent = "";
+    standbyParagrahp.textContent = encryptedText;
+    standbyImage.src = "";
+  } else {
+    standbyImage.src = "./img/muñeco.png";
+    standbyTitle.textContent = "Ningún mensaje fue encontrado";
+    standbyParagrahp.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+    swal("Ooops!", "Debes ingresar un texto", "warning");
   }
+}
 
-  function desencriptar(textoEncriptado) {
-    let textoOriginal = textoEncriptado.replace(/enter/g, "e")
-                                    .replace(/imes/g, "i")
-                                    .replace(/ai/g, "a")
-                                    .replace(/ober/g, "o")
-                                    .replace(/ufat/g, "u");
-    return textoOriginal;
+function decryptText() {
+  let textInput = document.getElementById("text-input").value;
+  let standbyTitle = document.getElementById("standby-tittle");
+  let standbyParagrahp = document.getElementById("standby-paragraph");
+  let standbyImage = document.getElementById("standby-image");
+
+  let encryptedText = textInput
+    .replace(/enter/gi, "e")
+    .replace(/imes/gi, "i")
+    .replace(/ai/gi, "a")
+    .replace(/ober/gi, "o")
+    .replace(/ufat/gi, "u");
+  
+    if (textInput.length != 0) {
+      document.getElementById("standby-paragraph").value = encryptedText;
+      standbyTitle.textContent = "";
+      standbyParagrahp.textContent = encryptedText;
+      standbyImage.src = "";
+    } else {
+      standbyImage.src = "./img/muñeco.png";
+      standbyTitle.textContent = "Ningún mensaje fue encontrado";
+      standbyParagrahp.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+      swal("Ooops!", "Debes ingresar un texto", "warning");
+    }
+}
+
+  //Limitar texto para no permitir mayusculas ni acentos//
+  function limitarTexto() {
+    let textarea = document.getElementById("text-input");
+    let contenido = textarea.value;
+    // Convertir todo el texto a minúsculas y sin acentos
+    let textoSinAcentos = contenido
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+    // Permitir solo letras y espacios
+    let textoFiltrado = textoSinAcentos.replace(/[^a-z ]/g, "");
+    // Actualizar el contenido del textarea
+    textarea.value = textoFiltrado;
   }

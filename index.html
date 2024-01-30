@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador Alura</title>
     <script src="encryptor.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1><img src="img/Logo.png" alt="Logo Alura"></h1>
+      <h1><img src="img/Logo.png" alt="Logo Alura" /></h1>
     </header>
 
     <main>
+      <div>
+        <div class="container-text-input">
+          <textarea
+            class="text-input"
+            id="text-input"
+            placeholder="Ingrese el texto aquí"
+            oninput="limitarTexto()"
+          ></textarea>
+        </div>
+        <div class="exceptions">
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
         <div>
-            <textarea id="textoOriginal" placeholder="Ingrese el texto aquí"></textarea>
+          <button class="encrypt-button" onclick="encryptText()">Encriptar</button>
+          <button class="decrypt-button" onclick="decryptText()">Desencriptar</button>
         </div>
-      
-        <div class="container-text-encrypt">
-          <textarea class="text-result-class" id="textoResultado" readonly placeholder="Ningún mensaje fue encontrado"></textarea>
-        </div>
-      
-        <div><button onclick="encriptarTexto()">Encriptar</button></div>
-        <div><button onclick="desencriptarTexto()">Desencriptar</button></div>
-      
-        <script>
-          function encriptarTexto() {
-            const textoOriginal = document.getElementById("textoOriginal").value;
-            const textoEncriptado = encriptar(textoOriginal);
-            document.getElementById("textoResultado").value = textoEncriptado;
-          }
-      
-          function desencriptarTexto() {
-            const textoEncriptado = document.getElementById("textoOriginal").value;
-            const textoOriginal = desencriptar(textoEncriptado);
-            document.getElementById("textoResultado").value = textoOriginal;
-          }
-        </script>
+      </div>
+
+
+      <!--Texto encriptado-->
+      <div class="container-text-encrypt">
+        <img class="image-output" src="img/Muñeco.png" id="standby-image"/>
+
+        <!--
+        <div class="text-encrypt" id="text-encrypt">
+          <h2 id="standby-tittle">Ningún mensaje fue encontrado</h2>
+          <p id="standby-paragraph">Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>-->
+      </div>
     </main>
-    
-</body>
+    <script src="encryptor.js"></script>
+
+  </body>
 </html>
