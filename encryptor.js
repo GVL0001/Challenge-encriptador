@@ -17,10 +17,13 @@ function encryptText() {
     standbyTitle.textContent = "";
     standbyParagrahp.textContent = encryptedText;
     standbyImage.src = "";
+    // Agregar clase al párrafo
+    standbyParagrahp.classList.add("formatted-text");
   } else {
     standbyImage.src = "./img/muñeco.png";
     standbyTitle.textContent = "Ningún mensaje fue encontrado";
-    standbyParagrahp.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+    standbyParagrahp.textContent =
+      "Ingresa el texto que deseas encriptar o desencriptar";
     swal("Ooops!", "Debes ingresar un texto", "warning");
   }
 }
@@ -37,31 +40,34 @@ function decryptText() {
     .replace(/ai/gi, "a")
     .replace(/ober/gi, "o")
     .replace(/ufat/gi, "u");
-  
-    if (textInput.length != 0) {
-      document.getElementById("standby-paragraph").value = encryptedText;
-      standbyTitle.textContent = "";
-      standbyParagrahp.textContent = encryptedText;
-      standbyImage.src = "";
-    } else {
-      standbyImage.src = "./img/muñeco.png";
-      standbyTitle.textContent = "Ningún mensaje fue encontrado";
-      standbyParagrahp.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-      swal("Ooops!", "Debes ingresar un texto", "warning");
-    }
+
+  if (textInput.length != 0) {
+    document.getElementById("standby-paragraph").value = encryptedText;
+    standbyTitle.textContent = "";
+    standbyParagrahp.textContent = encryptedText;
+    standbyImage.src = "";
+    // Agregar clase al párrafo
+    standbyParagrahp.classList.add("formatted-text");
+  } else {
+    standbyImage.src = "./img/muñeco.png";
+    standbyTitle.textContent = "Ningún mensaje fue encontrado";
+    standbyParagrahp.textContent =
+      "Ingresa el texto que deseas encriptar o desencriptar";
+    swal("Ooops!", "Debes ingresar un texto", "warning");
+  }
 }
 
-  //Limitar texto para no permitir mayusculas ni acentos//
-  function limitarTexto() {
-    let textarea = document.getElementById("text-input");
-    let contenido = textarea.value;
-    // Convertir todo el texto a minúsculas y sin acentos
-    let textoSinAcentos = contenido
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
-    // Permitir solo letras y espacios
-    let textoFiltrado = textoSinAcentos.replace(/[^a-z ]/g, "");
-    // Actualizar el contenido del textarea
-    textarea.value = textoFiltrado;
-  }
+//Limitar texto para no permitir mayusculas ni acentos//
+function limitarTexto() {
+  let textarea = document.getElementById("text-input");
+  let contenido = textarea.value;
+  // Convertir todo el texto a minúsculas y sin acentos
+  let textoSinAcentos = contenido
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  // Permitir solo letras y espacios
+  let textoFiltrado = textoSinAcentos.replace(/[^a-z ]/g, "");
+  // Actualizar el contenido del textarea
+  textarea.value = textoFiltrado;
+}

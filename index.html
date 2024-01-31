@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 
@@ -31,24 +34,24 @@
           <p>Solo letras minúsculas y sin acentos</p>
         </div>
         <div>
-          <button class="encrypt-button" onclick="encryptText()">Encriptar</button>
-          <button class="decrypt-button" onclick="decryptText()">Desencriptar</button>
+          <button class="encrypt-button" onclick="encryptText()">
+            Encriptar
+          </button>
+          <button class="decrypt-button" onclick="decryptText()">
+            Desencriptar
+          </button>
         </div>
       </div>
 
-
       <!--Texto encriptado-->
-      <div class="container-text-encrypt">
-        <img class="image-output" src="img/Muñeco.png" id="standby-image"/>
-
-        <!--
-        <div class="text-encrypt" id="text-encrypt">
+      <div class="container-text-encrypt" id="text-encrypt">
+          <img class="image-output" src="img/Muñeco.png" id="standby-image"/>
           <h2 id="standby-tittle">Ningún mensaje fue encontrado</h2>
-          <p id="standby-paragraph">Ingresa el texto que desees encriptar o desencriptar</p>
-        </div>-->
+          <p id="standby-paragraph">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
       </div>
     </main>
     <script src="encryptor.js"></script>
-
   </body>
 </html>

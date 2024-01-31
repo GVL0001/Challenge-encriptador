@@ -51,7 +51,9 @@ body {
 
   .container-text-encrypt{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: flex-start;
     position: absolute;
     width: 30%;
@@ -63,17 +65,13 @@ body {
     border-radius: 32px;
   }
 
-  .text-encrypt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .formatted-text {
+    font-size: 24px;
     justify-content: flex-start;
-    padding: 1%;
-    gap: 16px;
-    position: absolute;
-    width: 100%;
-    top: 65%;
-    text-align: center;
+    position: relative;
+    top: 0; 
+    left: 0;
+    width: 100%; 
   }
 
   button {
