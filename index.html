@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 
@@ -33,7 +30,7 @@
         <div class="exceptions">
           <p>Solo letras minúsculas y sin acentos</p>
         </div>
-        <div>
+        <div class="button-container">
           <button class="encrypt-button" onclick="encryptText()">
             Encriptar
           </button>
@@ -45,11 +42,11 @@
 
       <!--Texto encriptado-->
       <div class="container-text-encrypt" id="text-encrypt">
-          <img class="image-output" src="img/Muñeco.png" id="standby-image"/>
-          <h2 id="standby-tittle">Ningún mensaje fue encontrado</h2>
-          <p id="standby-paragraph">
-            Ingresa el texto que desees encriptar o desencriptar
-          </p>
+        <img class="image-output" src="img/Muñeco.png" id="standby-image" />
+        <h2 id="standby-tittle">Ningún mensaje fue encontrado</h2>
+        <p id="standby-paragraph">
+          Ingresa el texto que desees encriptar o desencriptar
+        </p>
       </div>
     </main>
     <script src="encryptor.js"></script>

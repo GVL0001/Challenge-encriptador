@@ -17,6 +17,9 @@ function encryptText() {
     standbyTitle.textContent = "";
     standbyParagrahp.textContent = encryptedText;
     standbyImage.src = "";
+    // Ocultar imagen y título
+    standbyImage.style.display = "none";
+    standbyTitle.style.display = "none";
     // Agregar clase al párrafo
     standbyParagrahp.classList.add("formatted-text");
   } else {
@@ -46,6 +49,9 @@ function decryptText() {
     standbyTitle.textContent = "";
     standbyParagrahp.textContent = encryptedText;
     standbyImage.src = "";
+    // Ocultar imagen y título
+    standbyImage.style.display = "none";
+    standbyTitle.style.display = "none";
     // Agregar clase al párrafo
     standbyParagrahp.classList.add("formatted-text");
   } else {
