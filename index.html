@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/danger.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 
@@ -28,7 +30,7 @@
           ></textarea>
         </div>
         <div class="exceptions">
-          <p>Solo letras minúsculas y sin acentos</p>
+          <i class="gg-danger"></i> Solo letras minúsculas y sin acentos
         </div>
         <div class="button-container">
           <button class="encrypt-button" onclick="encryptText()">
@@ -47,8 +49,17 @@
         <p id="standby-paragraph">
           Ingresa el texto que desees encriptar o desencriptar
         </p>
+        <button class="copy-button" onclick="copyText()">Copiar</button>
       </div>
     </main>
     <script src="encryptor.js"></script>
+
+    <footer>
+      <p>© Code by Gustavo Vargas</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/gustavo-angel-vargas-leal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GVL0001" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </footer>
   </body>
 </html>

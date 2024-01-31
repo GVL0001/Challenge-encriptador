@@ -1,4 +1,4 @@
-//Función de encriptador y desencriptador
+//Función de encriptador
 function encryptText() {
   let textInput = document.getElementById("text-input").value;
   let standbyTitle = document.getElementById("standby-tittle");
@@ -22,6 +22,8 @@ function encryptText() {
     standbyTitle.style.display = "none";
     // Agregar clase al párrafo
     standbyParagrahp.classList.add("formatted-text");
+    //mostrar copiar
+    showCopyButton();
   } else {
     standbyImage.src = "./img/muñeco.png";
     standbyTitle.textContent = "Ningún mensaje fue encontrado";
@@ -31,6 +33,7 @@ function encryptText() {
   }
 }
 
+//Función desencriptador
 function decryptText() {
   let textInput = document.getElementById("text-input").value;
   let standbyTitle = document.getElementById("standby-tittle");
@@ -54,6 +57,8 @@ function decryptText() {
     standbyTitle.style.display = "none";
     // Agregar clase al párrafo
     standbyParagrahp.classList.add("formatted-text");
+    //Mostrar copiar
+    showCopyButton();
   } else {
     standbyImage.src = "./img/muñeco.png";
     standbyTitle.textContent = "Ningún mensaje fue encontrado";
@@ -76,4 +81,35 @@ function limitarTexto() {
   let textoFiltrado = textoSinAcentos.replace(/[^a-z ]/g, "");
   // Actualizar el contenido del textarea
   textarea.value = textoFiltrado;
+}
+
+
+//Función para copiar el texto
+function copyText() {
+  // Seleccionar el párrafo encriptado
+  var encryptedParagraph = document.getElementById("standby-paragraph");
+
+  // Crear un elemento de texto temporal
+  var tempInput = document.createElement("textarea");
+  tempInput.value = encryptedParagraph.textContent;
+
+  // Agregar el elemento temporal al DOM
+  document.body.appendChild(tempInput);
+
+  // Seleccionar y copiar el contenido del elemento temporal
+  tempInput.select();
+  document.execCommand("copy");
+
+  // Eliminar el elemento temporal del DOM
+  document.body.removeChild(tempInput);
+
+  // Mostrar un mensaje de éxito usando sweetalert
+  swal("¡Texto copiado!", "El texto encriptado ha sido copiado al portapapeles.", "success");
+}
+
+
+// Función para mostrar el botón de copiar
+function showCopyButton() {
+  var copyButton = document.querySelector(".copy-button");
+  copyButton.style.display = "block";
 }
