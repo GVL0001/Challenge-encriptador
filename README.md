@@ -1,4 +1,4 @@
-# Encriptador Alura - Desafío Final
+# Challenge ONE - Construye un encriptador de texto con Javascript
 
 Este proyecto es el resultado del Challenge Alura, que consiste en crear un encriptador/desencriptador de texto con funcionalidades adicionales. La aplicación te permite realizar las siguientes acciones:
 
