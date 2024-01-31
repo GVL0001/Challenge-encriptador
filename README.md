@@ -1,3 +1,4 @@
-<h2>Primera versión del encriptador sin estilos</h2>
+<h2>Versión final del Challenge Alura: DESAFIO ENCRIPTADOR</h2>
 
-<p>Base HTML y función de encriptar y desencriptar creadas</p>
+<p>Función de encriptar, desencriptar y copiar creadas</p>
+<p>Pie de página agregado</p>
