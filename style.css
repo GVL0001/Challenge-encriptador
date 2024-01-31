@@ -1,18 +1,19 @@
+/*Configuraciones base de la página*/
 * {
   font-family: "Inter", sans-serif;
-  /*box-sizing: border-box;*/
 }
 
 body {
   background-color: #f3f5fc;
 }
 
+/*Estilos del header*/
 header {
   color: white;
-  /*text-align: center;*/
   padding: 1em 0;
 }
 
+/*Estilos del main*/
 main {
   margin-left: 60px;
   display: flex;
@@ -25,6 +26,7 @@ main div {
   padding: 10px;
 }
 
+/*Estilos del input del usuario*/
 .text-input {
   /*tamaño del bloque*/
   width: 680px;
@@ -68,6 +70,7 @@ main div {
   width: 100%;
 }
 
+/*Boton desencriptar y encriptar*/
 button {
   width: 328px;
   height: 67px;
@@ -120,12 +123,14 @@ button {
   color: #495057;
 }
 
+/*boton copiar*/
 .copy-button {
   display: none; /* Inicialmente oculto */
   margin-top: auto;
   margin-inline: auto;
 }
 
+/*Píe de página*/
 footer {
   display: inline-block;
   text-align: center;

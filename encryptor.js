@@ -88,21 +88,16 @@ function limitarTexto() {
 function copyText() {
   // Seleccionar el párrafo encriptado
   var encryptedParagraph = document.getElementById("standby-paragraph");
-
   // Crear un elemento de texto temporal
   var tempInput = document.createElement("textarea");
   tempInput.value = encryptedParagraph.textContent;
-
   // Agregar el elemento temporal al DOM
   document.body.appendChild(tempInput);
-
   // Seleccionar y copiar el contenido del elemento temporal
   tempInput.select();
   document.execCommand("copy");
-
   // Eliminar el elemento temporal del DOM
   document.body.removeChild(tempInput);
-
   // Mostrar un mensaje de éxito usando sweetalert
   swal("¡Texto copiado!", "El texto encriptado ha sido copiado al portapapeles.", "success");
 }
