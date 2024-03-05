@@ -33,3 +33,8 @@ Este proyecto es el resultado del Challenge Alura, que consiste en crear un encr
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si encuentras algún problema o tienes ideas para mejoras, no dudes en preguntar.
+
+## Insignia por completar este challenge
+<div align="center">
+  <img src="https://github.com/GVL0001/Challenge-encriptador/blob/main/img/insignia.png"  />
+</div>
