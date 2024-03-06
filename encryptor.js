@@ -39,39 +39,26 @@ function decryptText() {
   let standbyTitle = document.getElementById("standby-tittle");
   let standbyParagrahp = document.getElementById("standby-paragraph");
   let standbyImage = document.getElementById("standby-image");
-
   let decryptedText = textInput
-    .replace(/enter/gi, "e")
-    .replace(/imes/gi, "i")
-    .replace(/ai/gi, "a")
-    .replace(/ober/gi, "o")
-    .replace(/ufat/gi, "u");
+    .replace(/ufat/g, "u")
+    .replace(/ober/g, "o")
+    .replace(/imes/g, "i")
+    .replace(/enter/g, "e")
+    .replace(/ai/g, "a");
 
-  if (textInput.length != 0) {
-    // Handle cases where the decrypted substring is part of a larger word
-    decryptedText = decryptedText
-      .replace(/e/gi, "e")
-      .replace(/i/gi, "i")
-      .replace(/a/gi, "a")
-      .replace(/o/gi, "o")
-      .replace(/u/gi, "u");
-
+  if (textInput.length !== 0) {
     document.getElementById("standby-paragraph").value = decryptedText;
     standbyTitle.textContent = "";
     standbyParagrahp.textContent = decryptedText;
     standbyImage.src = "";
-    // Ocultar imagen y título
     standbyImage.style.display = "none";
     standbyTitle.style.display = "none";
-    // Agregar clase al párrafo
     standbyParagrahp.classList.add("formatted-text");
-    //Mostrar copiar
     showCopyButton();
   } else {
     standbyImage.src = "./img/muñeco.png";
     standbyTitle.textContent = "Ningún mensaje fue encontrado";
-    standbyParagrahp.textContent =
-      "Ingresa el texto que deseas encriptar o desencriptar";
+    standbyParagrahp.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
     swal("Ooops!", "Debes ingresar un texto", "warning");
   }
 }
