@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/danger.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://unpkg.com/css.gg@2.0.0/icons/css/danger.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="icon" href="img/title.png"
+    <link rel="icon" href="img/title.png">
   </head>
 
   <body>
@@ -20,7 +20,7 @@
       <h1><img src="img/Logo.png" alt="Logo Alura" /></h1>
     </header>
 
-    <main>
+    <main class="container-main">
       <div>
         <div class="container-text-input">
           <textarea
@@ -44,22 +44,28 @@
       </div>
 
       <!--Texto encriptado-->
-      <div class="container-text-encrypt" id="text-encrypt">
+      <aside class="container-text-encrypt" id="text-encrypt">
         <img class="image-output" src="img/Muñeco.png" id="standby-image" />
         <h2 id="standby-tittle">Ningún mensaje fue encontrado</h2>
         <p id="standby-paragraph">
           Ingresa el texto que desees encriptar o desencriptar
         </p>
         <button class="copy-button" onclick="copyText()">Copiar</button>
-      </div>
+      </aside>
     </main>
     <script src="encryptor.js"></script>
 
     <footer>
       <p>© Code by Gustavo Vargas</p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/gustavo-angel-vargas-leal/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/GVL0001" target="_blank"><i class="fab fa-github"></i></a>
+        <a
+          href="https://www.linkedin.com/in/gustavo-angel-vargas-leal/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/GVL0001" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
       </div>
     </footer>
   </body>

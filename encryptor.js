@@ -40,7 +40,7 @@ function decryptText() {
   let standbyParagrahp = document.getElementById("standby-paragraph");
   let standbyImage = document.getElementById("standby-image");
 
-  let encryptedText = textInput
+  let decryptedText = textInput
     .replace(/enter/gi, "e")
     .replace(/imes/gi, "i")
     .replace(/ai/gi, "a")
@@ -48,9 +48,17 @@ function decryptText() {
     .replace(/ufat/gi, "u");
 
   if (textInput.length != 0) {
-    document.getElementById("standby-paragraph").value = encryptedText;
+    // Handle cases where the decrypted substring is part of a larger word
+    decryptedText = decryptedText
+      .replace(/e/gi, "e")
+      .replace(/i/gi, "i")
+      .replace(/a/gi, "a")
+      .replace(/o/gi, "o")
+      .replace(/u/gi, "u");
+
+    document.getElementById("standby-paragraph").value = decryptedText;
     standbyTitle.textContent = "";
-    standbyParagrahp.textContent = encryptedText;
+    standbyParagrahp.textContent = decryptedText;
     standbyImage.src = "";
     // Ocultar imagen y título
     standbyImage.style.display = "none";
