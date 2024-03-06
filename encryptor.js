@@ -25,7 +25,7 @@ function encryptText() {
     //mostrar copiar
     showCopyButton();
   } else {
-    standbyImage.src = "./img/muñeco.png";
+    standbyImage.src = "./img/Muñeco.png";
     standbyTitle.textContent = "Ningún mensaje fue encontrado";
     standbyParagrahp.textContent =
       "Ingresa el texto que deseas encriptar o desencriptar";
@@ -56,7 +56,7 @@ function decryptText() {
     standbyParagrahp.classList.add("formatted-text");
     showCopyButton();
   } else {
-    standbyImage.src = "./img/muñeco.png";
+    standbyImage.src = "./img/Muñeco.png";
     standbyTitle.textContent = "Ningún mensaje fue encontrado";
     standbyParagrahp.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
     swal("Ooops!", "Debes ingresar un texto", "warning");
